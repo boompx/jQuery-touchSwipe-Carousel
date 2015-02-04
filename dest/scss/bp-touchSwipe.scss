@@ -1,0 +1,49 @@
+// $size
+$bpSwipecHeight   : 220px !default;
+$bpInnerItemWidth : 320px !default;
+$col-gutter       : 15px !default;
+
+// Base
+.bp-touchSwipe {
+  overflow: hidden;
+  position: relative;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  &:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }  
+}
+
+// Default size
+.bp-touchSwipe {
+  &,
+  .bp-touchSwipe_inner, 
+  .bp-inner_item {
+    height: $bpSwipecHeight;
+  }  
+}
+
+
+// Inner holder setup
+.bp-touchSwipe {
+  .bp-touchSwipe_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    @include transition(all, .1s, ease);
+  }  
+}
+
+// Item setup
+.bp-touchSwipe {
+  .bp-inner_item {
+    width: $bpInnerItemWidth;
+    float: left;
+  } 
+}

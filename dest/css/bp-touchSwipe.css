@@ -1,0 +1,36 @@
+.bp-touchSwipe {
+  overflow: hidden;
+  position: relative;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.bp-touchSwipe:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.bp-touchSwipe,
+.bp-touchSwipe .bp-touchSwipe_inner,
+.bp-touchSwipe .bp-inner_item {
+  height: 220px;
+}
+
+.bp-touchSwipe .bp-touchSwipe_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  -moz-transition: all, 0.1s, ease;
+  -o-transition: all, 0.1s, ease;
+  -webkit-transition: all, 0.1s, ease;
+  transition: all, 0.1s, ease;
+}
+
+.bp-touchSwipe .bp-inner_item {
+  width: 320px;
+  float: left;
+}
